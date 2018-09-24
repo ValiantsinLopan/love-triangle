@@ -4,8 +4,8 @@
  */
 module.exports = function getLoveTrianglesCount(preferences = []) {
     let triangles = 0;
-    var ignoredIndexes = [];
-    for ( var i = 0; i < preferences.length; i++ ){
+    let ignoredIndexes = [];
+    for ( let i = 0; i < preferences.length; i++ ){
         let first;
         let second;
         let third;
@@ -24,9 +24,6 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
         }
         else{
             third = preferences[second - 1];
-        }
-        if(i == 250){
-            console.log("lol");
         }
         if( (third == i + 1) && (first !== second) && (second!== first) ){
             triangles++;
